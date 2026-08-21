@@ -1,4 +1,27 @@
-# vinext-starter
+# Central Comercial
+
+Sistema interno para operação comercial da Nexus, com Base de Leads, Pipeline,
+calendário, tarefas, metas, produtos, documentos e Assistente IA.
+
+Este repositório contém somente o código-fonte. Dados operacionais, arquivos do
+R2, banco D1 e segredos de ambiente não estão incluídos.
+
+## Configuração sensível
+
+Configure os valores abaixo somente como variáveis ou segredos do ambiente de
+hospedagem; nunca os salve no repositório:
+
+- `OPENAI_API_KEY`
+- `OPENAI_MODEL` (opcional)
+- `CENTRAL_BOOTSTRAP_ADMIN_EMAILS`
+- `CENTRAL_MEMBER_EMAILS`
+- `CENTRAL_TEMPORARY_OPEN_ACCESS` (mantenha `false` em produção)
+
+O projeto usa os bindings `DB` (Cloudflare D1) e `BUCKET` (Cloudflare R2). A
+autenticação atual espera as rotas e os cabeçalhos de Sign in with ChatGPT
+fornecidos pelo ChatGPT Sites. Em uma hospedagem independente, substitua essa
+camada por um provedor de autenticação equivalente e preserve a autorização no
+servidor.
 
 A clean full-stack starter running on
 [vinext](https://github.com/cloudflare/vinext), with optional Cloudflare D1 and
